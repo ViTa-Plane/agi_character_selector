@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Evelyn - Cyberpunk Detective",
+    "category": "Character",
+    "character": "Evelyn",
+    "prompt": "{prompt}, 1girl, evelyn_character, sharp blue eyes, short dark hair, cybernetic glowing lines on neck, neon-lit alleyway background, BREAK",
+    "negative_prompt": "blurry, low quality, extra limbs, simple background, BREAK",
+    "clothes": {
+      "casual": "leather jacket, ripped jeans, grey tank top, fingerless gloves",
+      "tactical": "armored trench coat, tactical vest, combat boots, utility belt",
+      "formal": "sleek black blazer, silk shirt, tailored trousers"
+    },
+    "thumbnail": "evelyn.png",
+    "comment": "Best suited for sci-fi or dark neon aesthetic prompts. Pairs well with realistic SDXL checkpoints.",
+    "seed": "428901235",
+    "params": {
+      "steps": 30,
+      "cfg": 7.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras"
+    }
+  }
+]
