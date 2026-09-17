@@ -3,7 +3,7 @@ import json
 import re
 from server import PromptServer
 
-# v 1.3
+# v 1.4
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 STYLES_ROOT_DIR = os.path.join(CURRENT_DIR, "character_packs")
