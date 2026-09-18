@@ -327,7 +327,19 @@ app.registerExtension({
 
                 ctx.fillStyle = isJsonError ? "#ff3333" : (this.previewImageLoaded ? "#3cd3ff" : "#ff7c43");
                 ctx.font = "bold 11px sans-serif";
-                ctx.fillText(String(this.currentStyleName).split(" / ").pop().toUpperCase(), textStartX, startY + 10);
+                const drawTruncatedText = (text, x, y, maxWidth) => {
+                    let outputText = String(text);
+                    if (ctx.measureText(outputText).width > maxWidth) {
+                        while (outputText.length > 0 && ctx.measureText(outputText + "...").width > maxWidth) {
+                            outputText = outputText.slice(0, -1);
+                        }
+                        outputText += "...";
+                    }
+                    ctx.fillText(outputText, x, y);
+                };
+
+                const rawHeader = String(this.currentStyleName).split(" / ").pop().toUpperCase();
+                drawTruncatedText(rawHeader, textStartX, startY + 10, maxTextWidth);
 
                 ctx.font = "7px sans-serif";
                 let currentY = startY + 21;
